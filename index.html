@@ -1,0 +1,39 @@
+<!--
+ * @Author: fanjf
+ * @Date: 2022-03-14 11:18:29
+ * @LastEditTime: 2022-08-25 15:49:07
+ * @LastEditors: fanjf
+ * @FilePath: \devtools\index.html
+ * @Description: 🎉🎉🎉
+-->
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="version" content="202103014">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Warning</title>
+</head>
+
+<body>
+    <noscript>
+        <strong>We're sorry but We doesn't work properly without JavaScript enabled. Please enable it to
+            continue.</strong>
+    </noscript>
+</body>
+<script src="./devtools-detector.js"></script>
+<script>
+    var view = document.createElement('h1');
+    document.body.appendChild(view);
+  
+    devtoolsDetector.addListener(function(isOpen) {
+      view.innerText = isOpen
+        ? 'devtools status: open'
+        : 'devtools status: close';
+    });
+    devtoolsDetector.launch();
+  </script>
+
+</html>
